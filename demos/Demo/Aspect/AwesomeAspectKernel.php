@@ -6,7 +6,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 
-namespace Aspect;
+namespace Demo\Aspect;
 
 use Go\Core\AspectKernel;
 use Go\Core\AspectContainer;
@@ -26,6 +26,7 @@ class AwesomeAspectKernel extends AspectKernel
     protected function configureAop(AspectContainer $container)
     {
         $container->registerAspect(new DebugAspect());
+//        $container->registerAspect(new PrivilegedAspect());
         $container->registerAspect(new FluentInterfaceAspect());
         $container->registerAspect(new HealthyLiveAspect());
     }

@@ -6,9 +6,10 @@
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 
-namespace Example;
+namespace Demo\Example;
 
-use Aspect\FluentInterface;
+use Demo\Aspect\FluentInterface;
+use Demo\Annotation\Loggable;
 
 /**
  * Example class to show fluent interface in action
@@ -19,6 +20,9 @@ class User implements FluentInterface
     protected $surname;
     protected $password;
 
+    /**
+     * @Loggable
+     */
     public function setName($name)
     {
         $this->name = $name;
